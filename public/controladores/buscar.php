@@ -3,45 +3,42 @@
 include '../../config/conexionBD.php';
 
 
- $isbn = $_GET['isbn'];
+ $nombreAutor = $_GET['nombreAutor'];
  //echo "Hola " . $cedula;
 
- echo $isbn;
-
- $sql = "SELECT    as telefonos
-FROM usuario u , telefono t 
-WHERE u.usu_codigo = t.usuario_usu_codigo and usu_eliminado = 'N' and (usu_cedula='$cedula' or usu_correo='$cedula')
-GROUP by 1;";
-echo $sql;
+ $sql = "SELECT  l.lib_nombre, l.lib_isbn, l.lib_numpag, c.cap_titulo, c.cap_numero, a.aut_nombre, a.aut_nacionalidad
+FROM libro l , autorr a, capitulo c 
+WHERE a.aut_nombre = '$nombreAutor' and a.aut_id= c.autor_aut_id and l.lib_id = c.libro_lib_id";
  
 
 //cambiar la consulta para puede buscar por ocurrencias de letras
  $result = $conn->query($sql);
  echo "<table style='width:100%'>
  <tr>
- <th>Nombres</th>
- <th>Apellidos</th>
- <th>Dirección</th>
- <th>Telefonos</th>
- <th>Correo</th>
- <th></th>
- <th></th>
- <th></th>
+ <th>Libro</th>
+ <th>ISBN</th>
+ <th>N° Páginas</th>
+ <th>Título del Capítulo</th>
+ <th>N° Capítulo</th>
+ <th>Autor</th>
+ <th>Nacionalidad</th>
  </tr>";
  if ($result->num_rows > 0) {
  while($row = $result->fetch_assoc()) {
 
  echo "<tr>";
- echo " <td>" . $row['usu_nombres'] ."</td>";
- echo " <td>" . $row['usu_apellidos'] . "</td>";
- echo " <td>" . $row['usu_direccion'] . "</td>";
- echo " <td>" . $row['telefonos'] . "</td>";
- echo " <td>" . $row['usu_correo'] . "</td>";
+ echo " <td>" . $row['lib_nombre'] ."</td>";
+ echo " <td>" . $row['lib_isbn'] . "</td>";
+ echo " <td>" . $row['lib_numpag'] . "</td>";
+ echo " <td>" . $row['cap_titulo'] . "</td>";
+ echo " <td>" . $row['cap_numero'] . "</td>";
+ echo " <td>" . $row['aut_nombre'] . "</td>";
+ echo " <td>" . $row['aut_nacionalidad'] . "</td>";
  echo "</tr>";
  }
  } else {
  echo "<tr>";
- echo " <td colspan='7'> No existen usuarios registradas en el sistema </td>";
+ echo " <td colspan='7'> No existen libros registrados para el autor buscado </td>";
  echo "</tr>";
  }
  echo "</table>";
