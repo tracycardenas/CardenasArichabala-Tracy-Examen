@@ -26,12 +26,12 @@
 
         <ul><li type="none">
 
-            <form id="buscador" onsubmit="return buscarPorCedula()" >
-                <input type="text" id="cedula" style="width:260px" name="cedula" value="">
-                <input type="button" id="buscar" name="buscar" value="Buscar" onclick="buscarPorCedula()">
+            <form id="buscador" onsubmit="return buscarLibro()" >
+                <input type="text" id="nombreAutor" style="width:260px" name="nombreAutor" value="">
+                <input type="button" id="buscar" name="buscar" value="Buscar" onclick="buscarLibro()">
             </form>
 
-        <a id="Inicio" href="./login.html"> Registrar Libro</a>
+        <a id="Inicio" href="./crear_libro.php"> Registrar Libro</a>
 
         
 
