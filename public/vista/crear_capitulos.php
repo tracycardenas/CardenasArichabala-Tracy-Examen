@@ -21,9 +21,13 @@
 
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
         <link rel="stylesheet" href="../../Css/Crear.css">
-        <link rel="stylesheet" href="../../Css/select2.min.css">
-        <script type="text/javascript" src="../../JavaScr/select2.min.js"></script>
         <script type="text/javascript" src="../../JavaScr/jquery-3.6.0.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="../../Css/select2.min.css">
+        <script
+            src="https://code.jquery.com/jquery-3.3.1.js"
+            integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+            crossorigin="anonymous"></script>
+                <script src="../../JavaScr/select2.min.js"></script>
 
 
 
@@ -65,7 +69,7 @@
             
             <label for="direccion">Autor :</label>
 
-         <select name="autor" id="cbx_autor" onchange="seleccionarAutor();">
+         <select name="autor" id="cbx_autor" onchange="seleccionarAutor();" style="width: 80%">
                             <option value="0">Seleccionar Autor</option>
                             <?php while ($row=$result->fetch_assoc()) { ?>
                             <option value="<?php echo $row['aut_id'];?>"><?php echo $row['aut_nombre'];?></option>
@@ -87,6 +91,11 @@
     </body>
 
 </html>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#cbx_autor').select2();
+	});
+</script>
 
 
 
