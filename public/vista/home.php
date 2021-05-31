@@ -31,7 +31,7 @@
                 <input type="button" id="buscar" name="buscar" value="Buscar" onclick="buscarLibro()">
             </form>
 
-        <a id="Inicio" href="./crear_libro.php">Agregar Libro</a>
+        <a id="InicioAG" href="./crear_libro.php">Agregar Libro</a>
 
         
 

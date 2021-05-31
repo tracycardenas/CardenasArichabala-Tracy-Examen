@@ -1,3 +1,7 @@
+@font-face {
+    font-family: Tegomin;
+    src: url(../Fonts/NewTegomin-Regular.ttf);
+}
 
 body {
 	margin-top: 0px;
@@ -5,6 +9,8 @@ body {
 	margin-bottom: 0px;
 	margin-left: 0px;
 	background:whitesmoke;
+	font-family: Tegomin;
+
 }
 
 
@@ -26,7 +32,7 @@ header {
 	font-size: 25px;
 	text-align: center;
     color: rgb(0, 0, 0);
-	margin-top: -30px;
+	margin-top: -50px;
 
 
 }
@@ -56,6 +62,32 @@ header {
     padding: 0px 10px;
 	border-radius: 30px;
 }
+#InicioAG {
+	margin-left: 240px;
+	font-size: 23px;
+
+	color: rgb(255, 255, 255);
+	text-decoration: none;
+	display: inline-block;
+	background: #000000;
+	background: rgb(255, 255, 255);
+	color: #000000;
+    padding: 0px 10px;
+	border-radius: 30px;
+}
+#InicioL {
+	margin-left: 570px;
+	font-size: 23px;
+
+	color: rgb(255, 255, 255);
+	text-decoration: none;
+	display: inline-block;
+	background: #000000;
+	background: rgb(255, 255, 255);
+	color: #000000;
+    padding: 0px 10px;
+	border-radius: 30px;
+}
 
 /* Contenedor 1 */
 #cont{
@@ -73,12 +105,33 @@ header {
 	color: #000000;
 }
 #nombres{
-	margin-left: 65px;
-	background: #000000;
-	color: white;
-	font-size: 17px;
-	text-decoration: underline;
+	margin-left: 75px;
+	background: #ffffff;
+	color:black;
+	font-size: 14px;
+	font-family: Tegomin;
 }
+
+#numpag{
+	margin-left: 10px;
+	background: #ffffff;
+	color:black;
+	font-size: 14px;
+	font-family: Tegomin;
+}
+#ingresarInfo{
+	margin-left: 30px;
+	margin-top: 50px;
+}
+
+#isbn{
+	margin-left: 100px;
+	background: #ffffff;
+	color:black;
+	font-size: 14px;
+	font-family: Tegomin;
+}
+
 #table {
     margin-top: 3%;
     width: 10%;
@@ -90,7 +143,7 @@ header {
     
     
 }
-th, td {
+td {
     width: 5%;
     text-align: center;
     border: 1px solid black;
@@ -103,6 +156,13 @@ caption{
 }
 th{
     background-color:rgb(175, 192, 238);
+	width: 5%;
+    text-align: center;
+    border: 1px solid black;
+    border-spacing: 0;
+    padding: 0.1em;
+    caption-side: bottom;
+	font-size: large;
 }
 #buscador{
 	margin-right: 10px;
@@ -139,5 +199,63 @@ footer {
 #copy{
 	margin-right: 500px;
 }
+
+form{
+	border-color: blue ;
+	margin-left: 200px;
+	float: left;
+	font-size: larger;
+
+}
+
+#crear {
+	font-family: Tegomin;
+	margin-left: 100px;
+	font-size: 20px;
+
+}
+
+#cancelar {
+	font-family: Tegomin;
+	font-size: 20px;
+
+}
+
+#numero {
+	margin-left: 7px;
+	background: #ffffff;
+	color:black;
+	font-size: 16px;
+	font-family: Tegomin;
+
+}
+
+#titcap {
+	margin-left: 12px;
+	background: #ffffff;
+	color:black;
+	font-size: 16px;
+	font-family: Tegomin;
+
+}
+
+#nombreAutor{
+	margin-left: 12px;
+	background: #ffffff;
+	color:black;
+	font-size: 16px;
+	font-family: Tegomin;
+
+}
+#buscar {
+	margin-left: 12px;
+	background: #ffffff;
+	color:black;
+	font-size: 16px;
+	font-family: Tegomin;
+
+}
+
+
 
 

@@ -1,12 +1,30 @@
-
-body {
-	margin-top: 0px;
-	margin-right: 0px;
-	margin-bottom: 0px;
-	margin-left: 0px;
-    background: url(../Image/fondo5.jpg);
-    background-size: 100% 875px;
+@font-face {
+    font-family: Tegomin;
+    src: url(../Fonts/NewTegomin-Regular.ttf);
 }
+
+header {
+	font-size: 25px;
+	text-align: center;
+    color: rgb(0, 0, 0);
+	width: 100%;
+	background:url("../Image/portada.jpg");
+    background-size: 25%,500%;
+    margin: 0 auto;
+	padding-top: 50px;
+    border-bottom: 2px solid #2C9AB7;
+}
+
+#titulo {
+	font-size: 25px;
+	text-align: center;
+    color: rgb(0, 0, 0);
+	margin-top: -30px;
+
+
+}
+
+
 a{
     margin-left: 700px;
 	font-size: 20px;
@@ -37,18 +55,20 @@ H3{
     margin-top: 45px;
 }
 
-form{
+#formulario01{
     margin-left: 500px;
     margin-top: 70px;
     max-width: 500px;
-    min-height: 765px;
+    min-height: 500px;
     font-size: 17px;
     color: white;
     box-sizing: border-box;
     border-radius: 10px;
-    background: #000000; 
+    background: #ffffff; 
     text-align: left;
 }
+
+
 #Log{
     margin-top: 20px;
     text-align: center;
